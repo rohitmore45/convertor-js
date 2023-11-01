@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertor</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h4>You can use ViseVersa Convertor</h4>
+    <div>
+        <p>Temperature to Fahrenheit</p>
+        <input type="text" id="celcius" autofocus oninput="fahrenheit.value = (celcius.value * 9 / 5) + 32"><span>
+            °C</span>
+        <h2>=</h2>
+        <input type="text" id="fahrenheit" oninput="celcius.value=(fahrenheit.value-32) * 5/9"><span> °F</span>
+        <button onclick="celcius.value='';fahrenheit.value='';">Clear</button>
+    </div>
+    <div>
+        <p>Rupee to Dollar</p>
+        <input type="text" id="rupee" oninput="dollar.value= rupee.value * 0.012;dollar.value=tofixed(2);"><span>
+            ₹</span>
+        <h2>=</h2>
+        <input type="text" id="dollar" oninput="rupee.value = dollar.value / 0.012 "><span> $</span><br>
+        <button onclick="rupee.value='';dollar.value='';">Clear</button>
+    </div>
+
+    <div>
+        <p>Meter to Kilometer</p>
+        <input type="text" id="meter" oninput="km.value=meter.value/1000">
+        <span> m</span>
+        <h2>=</h2>
+        <input type="text" id="km" oninput="meter.value=km.value*1000">
+        <span> Km</span>
+        <button onclick="km.value='';meter.value='';">Clear</button>
+    </div>
+
+    <div>
+
+        <p>Milliliter to Liter</p>
+        <input type="text" id="mliter" oninput="liter.value=mliter.value / 1000"><span> mliter</span>
+        <h2>=</h2>
+        <input type="text" id="liter" oninput="mliter.value=liter.value * 1000">
+        <span>Liter</span>
+        <button onclick="mliter.value='';liter.value='';">Clear</button>
+    </div>
+
+    <div>
+        <p>Byte to Kilobyte</p>
+        <input type="text" id="byte" oninput="kilobyte.value=byte.value / 1000">
+        <span>Byte</span>
+        <h2>=</h2>
+        <input type="text" id="kilobyte" oninput="byte.value = kilobyte.value * 1000"><span> Kbyte</span>
+        <button onclick="byte.value='';kilobyte.value='';">Clear</button>
+    </div>
+</body>
+
+</html>
